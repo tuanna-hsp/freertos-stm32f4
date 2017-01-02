@@ -23,6 +23,15 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
+#include "stm32f4xx.h"
+/* Include my libraries here */
+#include "defines.h"
+#include "tm_stm32f4_delay.h"
+//#include "tm_stm32f4_disco.h"
+#include "tm_stm32f4_fatfs.h"
+#include <stdio.h>
+#include <string.h>
+
 /* Private typedef -----------------------------------------------------------*/
 GPIO_InitTypeDef  GPIO_InitStructure;
 /* Private define ------------------------------------------------------------*/
@@ -40,6 +49,7 @@ extern __IO uint8_t LED_Toggle;
 /* Private function prototypes -----------------------------------------------*/
 static void TIM_LED_Config(void);
 static void PlayMusic(void *pvParameters);
+static void ReadSDCard(void *pvParameters);
 static void TaskB(void *pvParameters);
 static void TaskC(void *pvParameters);
 /* Private functions ---------------------------------------------------------*/
@@ -61,10 +71,8 @@ int main(void)
   RCC_GetClocksFreq(&RCC_Clocks);
   SysTick_Config(RCC_Clocks.HCLK_Frequency / 100);
   
-  
    /* Green Led On: start of application */
-  STM_EVAL_LEDOn(LED4);
-  
+  //STM_EVAL_LEDOn(LED4);
   
   /* GPIOD Periph clo
   ck enable 
@@ -79,10 +87,53 @@ int main(void)
   GPIO_Init(GPIOD, &GPIO_InitStructure);*/
   
   xTaskCreate(PlayMusic, (signed char*)"PlayMusic", 128, NULL, 1, NULL);
-  xTaskCreate(TaskB, (signed char*)"TaskB", 128, NULL, 3, NULL);
-  xTaskCreate(TaskC, (signed char*)"TaskC", 128, NULL, 2, NULL);        
+  xTaskCreate(TaskB, (signed char*)"TaskB", 128, NULL, 4, NULL);
+  xTaskCreate(TaskC, (signed char*)"TaskC", 128, NULL, 3, NULL);        
+  xTaskCreate(ReadSDCard, (signed char*)"ReadSDCard", 512, NULL, 2, NULL);
   vTaskStartScheduler();  
 }
+
+ static void ReadSDCard(void *pvParameters){
+    FATFS FatFs;
+    FIL fil;
+    uint32_t free, total;
+    
+    STM_EVAL_LEDOn(LED4);
+    while(1){
+    if (f_mount(&FatFs, "0:", 1) == FR_OK) {
+		/* Mounted OK, turn on RED LED */
+		STM_EVAL_LEDOn(LED5);
+		
+		/* Try to open file */
+		if (f_open(&fil, "0:1stfile.txt", FA_CREATE_ALWAYS | FA_READ | FA_WRITE) == FR_OK) {
+			/* File opened, turn off RED and turn on GREEN led */
+			STM_EVAL_LEDOn(LED4);
+			STM_EVAL_LEDOff(LED5);
+			
+			/* If we put more than 0 characters (everything OK) */
+			if (f_puts("First string in my file\n", &fil) > 0) {
+				if (TM_FATFS_DriveSize(&total, &free) == FR_OK) {
+					/* Data for drive size are valid */
+				}
+				
+				/* Turn on both leds */
+				STM_EVAL_LEDOn(LED4);
+                                STM_EVAL_LEDOn(LED5);
+			}
+			
+			/* Close file, don't forget this! */
+			f_close(&fil);
+		}
+		
+		/* Unmount drive, don't forget this! */
+		f_mount(0, "0:", 1);
+    }else{
+      STM_EVAL_LEDToggle(LED4);
+    }
+     vTaskDelay(500);
+    }
+    
+ }
 
  static void TaskB(void *pvParameters)
  { 
