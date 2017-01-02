@@ -58,6 +58,41 @@
 #include "stm32f4xx_wwdg.h"
 #include "misc.h" /* High level functions for NVIC and SysTick (add-on to CMSIS functions) */
 
+#if defined (STM32F429_439xx)
+#include "stm32f4xx_cryp.h"
+#include "stm32f4xx_hash.h"
+#include "stm32f4xx_rng.h"
+#include "stm32f4xx_can.h"
+#include "stm32f4xx_dac.h"
+#include "stm32f4xx_dcmi.h"
+#include "stm32f4xx_dma2d.h"
+#include "stm32f4xx_fmc.h"
+#include "stm32f4xx_ltdc.h"
+#include "stm32f4xx_sai.h"
+#endif /* STM32F429_439xx */
+
+#if defined (STM32F427_437xx)
+#include "stm32f4xx_cryp.h"
+#include "stm32f4xx_hash.h"
+#include "stm32f4xx_rng.h"
+#include "stm32f4xx_can.h"
+#include "stm32f4xx_dac.h"
+#include "stm32f4xx_dcmi.h"
+#include "stm32f4xx_dma2d.h"
+#include "stm32f4xx_fmc.h"
+#include "stm32f4xx_sai.h"
+#endif /* STM32F427_437xx */
+
+#if defined (STM32F40_41xxx)
+#include "stm32f4xx_cryp.h"
+#include "stm32f4xx_hash.h"
+#include "stm32f4xx_rng.h"
+#include "stm32f4xx_can.h"
+#include "stm32f4xx_dac.h"
+#include "stm32f4xx_dcmi.h"
+#include "stm32f4xx_fsmc.h"
+#endif /* STM32F40_41xxx */
+
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 

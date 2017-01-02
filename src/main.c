@@ -61,19 +61,22 @@ int main(void)
   RCC_GetClocksFreq(&RCC_Clocks);
   SysTick_Config(RCC_Clocks.HCLK_Frequency / 100);
   
-  /* GPIOD Periph clock enable */
-  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
   
    /* Green Led On: start of application */
   STM_EVAL_LEDOn(LED4);
+  
+  
+  /* GPIOD Periph clo
+  ck enable 
+  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 
-  /* Configure PD12, PD13, PD14 and PD15 in output pushpull mode */
+  /* Configure PD12, PD13, PD14 and PD15 in output pushpull mode 
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13| GPIO_Pin_14| GPIO_Pin_15;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
-  GPIO_Init(GPIOD, &GPIO_InitStructure);
+  GPIO_Init(GPIOD, &GPIO_InitStructure);*/
   
   xTaskCreate(PlayMusic, (signed char*)"PlayMusic", 128, NULL, 1, NULL);
   xTaskCreate(TaskB, (signed char*)"TaskB", 128, NULL, 3, NULL);
@@ -85,10 +88,8 @@ int main(void)
  { 
      for(;;) 
     {
-        GPIO_SetBits(GPIOD, GPIO_Pin_13);
-        vTaskDelay(50);
-        GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-        vTaskDelay(50);
+        STM_EVAL_LEDToggle(LED6);
+        vTaskDelay(500);
     }
  }
 
@@ -96,9 +97,7 @@ static void TaskC(void *pvParameters)
  {   
      for(;;) 
       {
-         GPIO_SetBits(GPIOD, GPIO_Pin_14);
-         vTaskDelay(200);
-         GPIO_ResetBits(GPIOD, GPIO_Pin_14);
+         STM_EVAL_LEDToggle(LED3);
          vTaskDelay(200);
      }
   }

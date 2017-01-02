@@ -85,11 +85,11 @@
         </option>
         <option>
           <name>OCDynDriverList</name>
-          <state>ARMSIM_ID</state>
+          <state>STLINK_ID</state>
         </option>
         <option>
           <name>OCLastSavedByProductVersion</name>
-          <state>7.80.2.11970</state>
+          <state>7.80.3.12143</state>
         </option>
         <option>
           <name>UseFlashLoader</name>
@@ -1204,7 +1204,7 @@
         </option>
         <option>
           <name>CCSTLinkInterfaceRadio</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCSTLinkInterfaceCmdLine</name>
@@ -1212,12 +1212,12 @@
         </option>
         <option>
           <name>CCSTLinkResetList</name>
-          <version>1</version>
+          <version>2</version>
           <state>0</state>
         </option>
         <option>
           <name>CCCpuClockEdit</name>
-          <state></state>
+          <state>168.0</state>
         </option>
         <option>
           <name>CCSwoClockAuto</name>
@@ -1298,7 +1298,7 @@
         </option>
         <option>
           <name>CCSTLinkDAPNumber</name>
-          <state></state>
+          <state>0</state>
         </option>
       </data>
     </settings>

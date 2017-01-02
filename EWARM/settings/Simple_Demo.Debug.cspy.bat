@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "E:\RTOS\FreeRTOS_Simple_Demo\EWARM\settings\Simple_Demo.Debug.general.xcl" --backend -f "E:\RTOS\FreeRTOS_Simple_Demo\EWARM\settings\Simple_Demo.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "C:\Users\viet\Documents\freertos-stm32f4\EWARM\settings\Simple_Demo.Debug.general.xcl" --backend -f "C:\Users\viet\Documents\freertos-stm32f4\EWARM\settings\Simple_Demo.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "E:\RTOS\FreeRTOS_Simple_Demo\EWARM\settings\Simple_Demo.Debug.general.xcl" "--debug_file=%~1" --backend -f "E:\RTOS\FreeRTOS_Simple_Demo\EWARM\settings\Simple_Demo.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "C:\Users\viet\Documents\freertos-stm32f4\EWARM\settings\Simple_Demo.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\viet\Documents\freertos-stm32f4\EWARM\settings\Simple_Demo.Debug.driver.xcl" 
 
 @echo off 
 :end

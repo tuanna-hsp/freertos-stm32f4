@@ -77,7 +77,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>7.80.2.11970</state>
+          <state>7.80.3.12143</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -318,6 +318,7 @@
           <name>CCIncludePath2</name>
           <state>$PROJ_DIR$\..\src</state>
           <state>$PROJ_DIR$\..\src\Wave</state>
+          <state>$PROJ_DIR$\..\src\FATFS</state>
           <state>$PROJ_DIR$\..\src\FreeRTOS</state>
           <state>$PROJ_DIR$\..\src\STM32F4-Discovery</state>
           <state>$PROJ_DIR$\..\src\STM32F4xx_StdPeriph_Driver</state>
@@ -978,6 +979,24 @@
     </file>
   </group>
   <group>
+    <name>FATFS</name>
+    <file>
+      <name>$PROJ_DIR$\..\src\FATFS\diskio.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\FATFS\fatfs_sd_sdio.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\FATFS\ff.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\FATFS\syscall.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\FATFS\unicode.c</name>
+    </file>
+  </group>
+  <group>
     <name>FreeRTOS</name>
     <file>
       <name>$PROJ_DIR$\..\src\FreeRTOS\croutine.c</name>
@@ -1046,6 +1065,9 @@
       <name>$PROJ_DIR$\..\src\STM32F4xx_StdPeriph_Driver\stm32f4xx_rtc.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\src\STM32F4xx_StdPeriph_Driver\stm32f4xx_sdio.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\src\STM32F4xx_StdPeriph_Driver\stm32f4xx_spi.c</name>
     </file>
     <file>
@@ -1068,6 +1090,12 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\src\system_stm32f4xx.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\tm_stm32f4_fatfs.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\tm_stm32f4_gpio.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\src\Wave\waveplayer.c</name>
