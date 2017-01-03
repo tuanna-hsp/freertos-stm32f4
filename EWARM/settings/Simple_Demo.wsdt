@@ -12,7 +12,7 @@
           
           
           
-        <Column0>272</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <Column0>297</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Debug-Log>
         
@@ -29,7 +29,7 @@
     <Windows>
       
       
-    <Wnd0>
+    <Wnd2>
         <Tabs>
           <Tab>
             <Identity>TabID-21903-3287</Identity>
@@ -37,24 +37,24 @@
             <Factory>Workspace</Factory>
             <Session>
               
-            <NodeDict><ExpandedNode>Simple_Demo</ExpandedNode><ExpandedNode>Simple_Demo/EWARM</ExpandedNode><ExpandedNode>Simple_Demo/FATFS</ExpandedNode><ExpandedNode>Simple_Demo/FreeRTOS</ExpandedNode><ExpandedNode>Simple_Demo/Output</ExpandedNode><ExpandedNode>Simple_Demo/STM32F4-Discovery</ExpandedNode><ExpandedNode>Simple_Demo/STM32F4xx_StdPeriph_Driver</ExpandedNode><ExpandedNode>Simple_Demo/User</ExpandedNode><ExpandedNode>Simple_Demo/User/main.c</ExpandedNode></NodeDict></Session>
+            <NodeDict><ExpandedNode>Simple_Demo</ExpandedNode><ExpandedNode>Simple_Demo/EWARM</ExpandedNode><ExpandedNode>Simple_Demo/FATFS</ExpandedNode><ExpandedNode>Simple_Demo/FATFS/ff.c</ExpandedNode><ExpandedNode>Simple_Demo/FreeRTOS</ExpandedNode><ExpandedNode>Simple_Demo/Output</ExpandedNode><ExpandedNode>Simple_Demo/STM32F4-Discovery</ExpandedNode><ExpandedNode>Simple_Demo/STM32F4xx_StdPeriph_Driver</ExpandedNode><ExpandedNode>Simple_Demo/User</ExpandedNode><ExpandedNode>Simple_Demo/User/main.c</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd0><Wnd1><Tabs><Tab><Identity>TabID-28093-7680</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-5531-10968</Identity><TabName>Build</TabName><Factory>Build</Factory><Session/></Tab><Tab><Identity>TabID-12076-14325</Identity><TabName>Declarations</TabName><Factory>Find-All-Declarations</Factory><Session/></Tab><Tab><Identity>TabID-25262-19159</Identity><TabName>References</TabName><Factory>Find-All-References</Factory><Session/></Tab><Tab><Identity>TabID-5540-7103</Identity><TabName>Ambiguous Definitions</TabName><Factory>Select-Ambiguous-Definitions</Factory><Session/></Tab></Tabs><SelectedTab>1</SelectedTab></Wnd1></Windows>
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3><Tabs><Tab><Identity>TabID-28093-7680</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-5531-10968</Identity><TabName>Build</TabName><Factory>Build</Factory><Session/></Tab><Tab><Identity>TabID-12076-14325</Identity><TabName>Declarations</TabName><Factory>Find-All-Declarations</Factory><Session/></Tab><Tab><Identity>TabID-25262-19159</Identity><TabName>References</TabName><Factory>Find-All-References</Factory><Session/></Tab><Tab><Identity>TabID-5540-7103</Identity><TabName>Ambiguous Definitions</TabName><Factory>Select-Ambiguous-Definitions</Factory><Session/></Tab></Tabs><SelectedTab>1</SelectedTab></Wnd3></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>84</YPos2><SelStart2>3417</SelStart2><SelEnd2>3417</SelEnd2></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\Wave\waveplayer.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>67</YPos2><SelStart2>2910</SelStart2><SelEnd2>2910</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\stm32f4xx_it.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>65</YPos2><SelStart2>2915</SelStart2><SelEnd2>2915</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\FATFS\ff.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>2360</YPos2><SelStart2>86611</SelStart2><SelEnd2>86611</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\src\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>100</YPos2><SelStart2>3902</SelStart2><SelEnd2>3902</SelEnd2></Tab><ActiveTab>1</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-0513EA20><key>iaridepm.enu1</key></Toolbar-0513EA20></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>474</Bottom><Right>363</Right><x>-2</x><y>-2</y><xscreen>102</xscreen><yscreen>98</yscreen><sizeHorzCX>79688</sizeHorzCX><sizeHorzCY>136681</sizeHorzCY><sizeVertCX>285156</sizeVertCX><sizeVertCY>663877</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>198</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>200</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>278940</sizeHorzCY><sizeVertCX>156250</sizeVertCX><sizeVertCY>278940</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-05762090><key>iaridepm.enu1</key></Toolbar-05762090></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>451</Bottom><Right>388</Right><x>-2</x><y>-2</y><xscreen>109</xscreen><yscreen>94</yscreen><sizeHorzCX>79795</sizeHorzCX><sizeHorzCY>137226</sizeHorzCY><sizeVertCX>285505</sizeVertCX><sizeVertCY>661314</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>189</Bottom><Right>1368</Right><x>-2</x><y>-2</y><xscreen>1370</xscreen><yscreen>191</yscreen><sizeHorzCX>1002928</sizeHorzCX><sizeHorzCY>278832</sizeHorzCY><sizeVertCX>155930</sizeVertCX><sizeVertCY>278832</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

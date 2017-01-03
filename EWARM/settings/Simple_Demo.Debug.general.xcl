@@ -2,7 +2,7 @@
 
 "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armstlink2.dll" 
 
-"C:\Users\viet\Documents\freertos-stm32f4\EWARM\Debug\Exe\STM32F4-Discovery_FreeRTOS_Demo.out" 
+"E:\RTOS\FreeRTOS_Simple_Demo\EWARM\Debug\Exe\STM32F4-Discovery_FreeRTOS_Demo.out" 
 
 --plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armbat.dll" 
 
