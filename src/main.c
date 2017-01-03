@@ -101,7 +101,6 @@ int main(void)
     STM_EVAL_LEDOn(LED5);
     while (f_mount(&FatFs, "0:", 1) != FR_OK) {
       vTaskDelay(1000);
-      //f_mount(0, "0:", 1);
     }
     STM_EVAL_LEDOff(LED5);    
     STM_EVAL_LEDOn(LED4);
@@ -110,15 +109,27 @@ int main(void)
       vTaskDelay(1000);
     }
     
+    TCHAR line[100];
     while (1) {
-      if (f_puts("First string in my file\n", &fil) > 0) {          
-          STM_EVAL_LEDToggle(LED4);
+      TCHAR* result = f_gets(line, 100, &fil);
+      if (result != NULL) {    
+        printf("%s", line);
+        STM_EVAL_LEDToggle(LED4);
       }
-      else {        
-          STM_EVAL_LEDToggle(LED5);
+      else { 
+        printf("EOF");
+        break;
       }
       vTaskDelay(1000);
-    }    
+    }   
+    f_close(&fil);
+    f_mount(0, "0:", 1);
+    
+    STM_EVAL_LEDOff(LED4);
+    while(1) {        
+      STM_EVAL_LEDToggle(LED5);
+      vTaskDelay(300);
+    }
  }
 
  static void TaskB(void *pvParameters)
